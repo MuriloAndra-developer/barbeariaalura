@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contato - Barbearia Alura</title>
+  </head>
+  <body>
+    <header>
+      <div class="caixa">
+        <h1>
+          <img src="imagensprodutos/logo.png" alt="Logo da Barbearia Alura" />
+        </h1>
+
+        <nav>
+          <ul class="nevegação">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-contatos">
+      <!-- A tag "form" serve para abrir formúlarios-->
+      <form action="">
+        <!-- No "form" não usamos tags comuns para textos, utilizamos "label" que é uma ETIQUETA. Nela 
+        precisamos colocar o "ID" do "INPUT" ao qual se refere, pois são um par-->
+        <label for="nomesobrenome">Nome e sobrenome</label>
+        <!-- "input" serve para quando o user estiver inserindo informações.
+          Todo "input" é único e por isso precisa de um identificador -->
+        <!-- O "riquired" = *campo obrigatorio*
+            O "pleaceholder" = *prenchimento sugestivo* -->
+        <input type="text" id="nomesobrenome" class="input-padrao" required />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="input-padrao"
+          riquired
+          placeholder="seuemail@dominio.com"
+        />
+
+        <label for="telefone">Telefone</label>
+        <input
+          type="tel"
+          id="telefone"
+          class="input-padrao"
+          riquired
+          placeholder="(xx) xxxxx-xxxx"
+        />
+
+        <!-- O "textarea" Funciona como um "INPUT", mas serve p/ quando o usuario quiser colocar mais de uma linha de texto, ou até mesmo textos mais complexos-->
+        <label for="mensagem">Mensagem</label>
+        <textarea
+          name=""
+          id="mensagem"
+          cols="30"
+          rows="10"
+          class="input-padrao"
+          required
+        ></textarea>
+
+        <!-- "fieldset" = Tag para dividir um assunto especifico
+        exmp: preenchimento de campo de um cartão de credito.-->
+        <fieldset>
+          <!-- Esse "INPUT" tem a configuração de exibir três opções no mesmo campo.
+              Configuração (name="..."): serve para possibilitar a marcação de apenas um dos três campos.
+            "legend" = paragrafo dentro de um "fieldset"-->
+          <legend>Como prefere o nosso contato?</legend>
+          <label for="radio-email">
+            <input type="radio" name="contato" value="email" id="radio-email" />
+            Email</label
+          >
+          <label for="radio-telefone">
+            <input
+              type="radio"
+              name="contato"
+              value="telefone"
+              id="radio-telefone"
+            />
+            Telefone</label
+          >
+          <label for="radio-whatsapp"
+            ><!-- "checked = marcado"--><input
+              type="radio"
+              name="contato"
+              value="whatsapp"
+              id="radio-whatsapp"
+              checked
+            />
+            Whatsapp</label
+          >
+
+          <p>Prefere ser atendido em qual horário?</p>
+          <select name=" " id="">
+            <option value="">Manhã</option>
+            <option value="">Tarde</option>
+            <option value="">Noite</option>
+          </select>
+        </fieldset>
+
+        <label>
+          <input type="checkbox" class="checkbox" checked /> Gostaria receber
+          novidades por email?
+        </label>
+
+        <!-- O <input type="submit" /> serve para enviar a informação para um servidor, E-mail ou outra página.-->
+        <input type="submit" value="Enviar formulário" class="enviar" />
+      </form>
+
+      <!-- <table> = tabela-->
+      <table>
+        <!-- <thead> = cabeçalho-->
+        <thead>
+          <!-- <tr> = table roll ou linha-->
+          <tr>
+            <!-- <th> = celula do head-->
+            <th>Dia</th>
+            <th>Horário</th>
+          </tr>
+        </thead>
+
+        <!-- <tbody> = corpo-->
+        <tbody>
+          <tr>
+            <!-- <td> = celula do body-->
+            <td>Segunda</td>
+            <td>8h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Quarta</td>
+            <td>8h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Sexta</td>
+            <td>8h ~ 20h</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <img
+        src="imagensprodutos/logo-branco.png"
+        alt="Logo da Barbearia Alura"
+      />
+      <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+    </footer>
+  </body>
+</html>
